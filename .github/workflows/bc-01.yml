@@ -88,9 +88,9 @@ jobs:
       - name: Terraform Plan
         id: plan
         run: |
-          terraform plan \
+          terraform plan -out=tfplan 
             # -var-file="environments/${{ github.event.inputs.environment || 'dev' }}.tfvars" \
-            -out=tfplan
+            # -out=tfplan
       
       - name: Terraform Apply
         if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main'
