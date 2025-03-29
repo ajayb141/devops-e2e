@@ -7,20 +7,20 @@ on:
   pull_request:
     branches:
       - main
-  # workflow_dispatch:
-  #   inputs:
-  #     environment:
-  #       description: 'Environment to deploy to'
-  #       required: true
-  #       default: 'dev'
-  #       type: choice
-  #       options:
-  #         - dev
-  #         - staging
-  #         - prod
-  #     account_nbr:
-  #       description: 'Account to dpeloy to'
-  #       type: string
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to deploy to'
+        required: true
+        default: 'dev'
+        type: choice
+        options:
+          - dev
+          - staging
+          - prod
+      account_nbr:
+        description: 'Account to dpeloy to'
+        type: string
 
 permissions:
   contents: read
