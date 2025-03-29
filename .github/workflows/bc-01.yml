@@ -37,7 +37,7 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: ./BC-01.yml/ 
+        working-directory: ./BC-01 
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
