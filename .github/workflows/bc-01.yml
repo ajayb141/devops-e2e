@@ -64,7 +64,7 @@ jobs:
         run: |
           aws cloudformation deploy \
             --stack-name terraform-backend \
-            --template-file BC-01/cfn/s3-dynamodb.yml \
+            --template-file cfn/s3-dynamodb.yml \
             --capabilities CAPABILITY_NAMED_IAM
 
       - name: Terraform Format
