@@ -12,7 +12,7 @@ resource "aws_s3_bucket" "this" {
 resource "aws_s3_bucket_object" "index" {
   bucket = aws_s3_bucket.this.id
   key    = "index.html"
-  source = "BC-01/index.html"
+  source = "./index.html"
 
   tags = {
     Name        = "My bucket object"
